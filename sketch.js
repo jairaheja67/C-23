@@ -14,6 +14,12 @@ function preload()
 function setup() {
 	createCanvas(800, 700);
 	rectMode(CENTER);
+
+	var rectangle_options={
+		restitution:0
+	
+	
+	  }
 	
 
 	packageSprite=createSprite(width/2, 80, 10,10);
@@ -24,9 +30,12 @@ function setup() {
 	helicopterSprite.addImage(helicopterIMG)
 	helicopterSprite.scale=0.6
 
-	groundSprite=createSprite(width/2, height-35, width,10);
+	groundSprite=createSprite(width/2, height-35, width,10,);
 	groundSprite.shapeColor=color(255)
-
+	 
+	rectangle1=createSprite(360,635,20,50,rectangle_options)
+	rectangle2=createSprite(410,650,80,20,rectangle_options)
+	rectangle3=createSprite(460,635,20,50,rectangle_options)
 
 	engine = Engine.create();
 	world = engine.world;
